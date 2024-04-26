@@ -3,9 +3,6 @@ import requests
 from .exception import CoffeeHouseError
 
 
-__all__ = ['API']
-
-
 class API:
     """
     Base class for all CoffeeHouse services.
@@ -47,22 +44,13 @@ class API:
         if access_key:
             payload['access_key'] = self.access_key
         response = requests.post(
-            '{}/{}'.format(
-                self.endpoint,
-                path,
-            ),
-            payload,
+            f"{self.endpoint}/{path}",
+            json=payload,
         )
-        request_id = None
-        if 'x-request-id' in response.headers:
-            request_id = response.headers['x-request-id']
+        request_id = response.headers.get('x-request-id')
         result = CoffeeHouseError.parse_and_raise(
             response.status_code,
             response.text,
             request_id,
         )
-        if 'payload' in result:
-            # V1 API
-            return result['payload']
-        # V2 API
-        return result['results']
+        return result.get('payload', result.get('results'))

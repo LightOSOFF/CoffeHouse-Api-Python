@@ -52,3 +52,5 @@ while True:
 ```
 
 This has the same effect as the previous example but uses the `lydia` instance directly.
+
+🛠️ **Maintained by LightOSOFF** 🛠️

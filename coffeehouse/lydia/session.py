@@ -17,7 +17,6 @@ class LydiaSession:
             self.ai_emotion_probability = data['ai_emotion_probability']
             self.current_language = data['current_language']
             self.current_language_probability = data['current_language_probability']
-    
 
     def think_thought(self, text):
         """

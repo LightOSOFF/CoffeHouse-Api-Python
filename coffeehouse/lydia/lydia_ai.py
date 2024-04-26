@@ -1,7 +1,6 @@
 from ..api import API
 from .session import LydiaSession
 
-
 __all__ = ['LydiaAI']
 
 

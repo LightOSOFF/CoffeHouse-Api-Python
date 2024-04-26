@@ -21,6 +21,6 @@ __all__ = (
 )
 
 __version__ = '2.2.6'
-__author__ = 'Intellivoid Technologies'
-__source__ = 'https://github.com/intellivoid/CoffeeHouse-Python-API-Wrapper'
+__author__ = 'LightOsOff'
+__source__ = 'https://github.com/LightOSOFF/CoffeeHouse-Api-Python'
 __copyright__ = 'Copyright (c) 2017-2021 ' + __author__

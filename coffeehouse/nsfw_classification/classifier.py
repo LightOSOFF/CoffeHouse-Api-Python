@@ -1,4 +1,4 @@
-from ..utils import attrdict
+from ..utils import AttrDict
 
 __all__ = ['Classifier', 'NSFW_Classifier']
 
@@ -13,7 +13,7 @@ class NSFW_Classifier:
         NSFW Classifier Object
         """
         self._client = client
-        self.nsfw_classification = attrdict(data['nsfw_classification'])
+        self.nsfw_classification = AttrDict(data['nsfw_classification'])
 
 
 Classifier = NSFW_Classifier  # For compatibility

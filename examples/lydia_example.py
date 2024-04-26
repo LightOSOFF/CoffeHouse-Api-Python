@@ -12,11 +12,11 @@ def main():
     # Optional: language parameter, defaults to "en"
     session = lydia.create_session(language='en')
     print(f'Session ID: {session.id}')
-    print('Session Available: {}'.format(str(session.available)))
-    print('Session Language: {}'.format(str(session.language)))
+    print('Session Available: {}'.format(session.available))
+    print('Session Language: {}'.format(session.language))
     print(
         'Session Expires: {}'.format(
-            str(datetime.fromtimestamp(session.expires)),
+            datetime.fromtimestamp(session.expires),
         ),
     )
 

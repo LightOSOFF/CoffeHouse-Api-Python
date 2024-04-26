@@ -3,7 +3,6 @@ import base64
 from ..api import API
 from .classifier import NSFW_Classifier
 
-
 __all__ = ['NsfwClassifier']
 
 
@@ -14,7 +13,6 @@ class NsfwClassifier(API):
         :param access_key:
         :param endpoint:
         """
-
         super().__init__(*args, **kwargs)
 
     def classify(self, image):
@@ -27,7 +25,6 @@ class NsfwClassifier(API):
         :returns: The results of nsfw image
         :rtype: NSFWClassifier
         """
-
         return NSFW_Classifier(
             self._send(
                 'v1/image/nsfw_classification',
