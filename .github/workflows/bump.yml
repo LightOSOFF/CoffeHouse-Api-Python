@@ -24,7 +24,7 @@ jobs:
         uses: bump-sh/github-action@v1
         with:
           doc: coffeehouse
-          token: Dk5uksexCxTij61dUZWiPjXSTAj4nTVE
+          token: SECRET_BUMP
           file: doc/api-documentation.yml
   api-diff:
     if: ${{ github.event_name == 'pull_request' }}
@@ -37,11 +37,12 @@ jobs:
         uses: bump-sh/github-action@v1
         with:
           doc: coffeehouse
-          token: Dk5uksexCxTij61dUZWiPjXSTAj4nTVE
+          token: SECRET_BUMP
           file: doc/api-documentation.yml
           command: diff
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          SECRET_BUMP: ${{secrets.SECRET_BUMP}}
 
 
     
